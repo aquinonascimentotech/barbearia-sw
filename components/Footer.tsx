@@ -11,18 +11,17 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div
-                className="w-10 h-10 rounded-full flex items-center justify-center font-black text-sm text-black"
-                style={{ background: "linear-gradient(135deg, #c9a84c, #e8c97a)" }}
-              >
-                SW
-              </div>
+              <img
+                src="/images/logo.png"
+                alt="Barbearia SW"
+                className="w-10 h-10 object-contain"
+              />
               <span className="font-bold text-lg text-white">
                 Barbearia <span className="gold-gradient-text">SW</span>
               </span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
-              A barbearia premium de São Paulo. Transformamos sua aparência com
+              A barbearia premium de Uberlândia. Transformamos sua aparência com
               técnica, estilo e dedicação.
             </p>
             {/* Social */}
@@ -111,12 +110,12 @@ export default function Footer() {
           <p>
             Desenvolvido por{" "}
             <a
-              href="https://github.com/seu-usuario"
+              href="https://github.com/aquinonascimentotech"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#c9a84c] hover:underline"
+              className="text-[#c9a84c] hover:underline font-semibold"
             >
-              Felipe Nascimento
+              Aquino Nascimento Tech
             </a>
           </p>
         </div>
