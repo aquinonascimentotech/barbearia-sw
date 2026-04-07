@@ -6,45 +6,18 @@ import Reveal from "./Reveal";
 const transformations = [
   {
     id: 1,
-    before: {
-      bg: "from-gray-700 to-gray-800",
-      label: "Antes",
-      description: "Cabelo crescido, barba por fazer",
-    },
-    after: {
-      bg: "from-[#c9a84c]/30 to-[#1a1a1a]",
-      label: "Depois",
-      description: "Corte fade + barba degradê",
-    },
-    style: "Fade + Barba",
+    image: "/images/before-after-1.jpeg",
+    style: "Transformação Completa",
   },
   {
     id: 2,
-    before: {
-      bg: "from-gray-700 to-gray-800",
-      label: "Antes",
-      description: "Cabelo despenteado, sem forma",
-    },
-    after: {
-      bg: "from-[#c9a84c]/30 to-[#1a1a1a]",
-      label: "Depois",
-      description: "Undercut moderno",
-    },
-    style: "Undercut Clássico",
+    image: "/images/before-after-2.jpeg",
+    style: "Corte + Barba Premium",
   },
   {
     id: 3,
-    before: {
-      bg: "from-gray-700 to-gray-800",
-      label: "Antes",
-      description: "Barba irregular e sem definição",
-    },
-    after: {
-      bg: "from-[#c9a84c]/30 to-[#1a1a1a]",
-      label: "Depois",
-      description: "Barba modelada e hidratada",
-    },
-    style: "Barba Premium",
+    image: "/images/work-1.jpg",
+    style: "Resultado Profissional",
   },
 ];
 
@@ -104,56 +77,33 @@ export default function BeforeAfter() {
           ))}
         </div>
 
-        {/* Before / After display */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-          {/* Before */}
-          <div className="relative rounded-2xl overflow-hidden border border-[#1e1e1e]">
-            <div
-              className={`w-full h-72 bg-gradient-to-br ${transformations[active].before.bg} flex items-center justify-center`}
-            >
-              <div className="text-center">
-                <div className="text-6xl mb-3 opacity-50">👤</div>
-                <div className="text-gray-400 text-sm px-6 text-center">
-                  {transformations[active].before.description}
-                </div>
-              </div>
-            </div>
-            <div className="absolute top-4 left-4 bg-red-500/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-white">
-              ANTES
-            </div>
-          </div>
-
-          {/* After */}
+        {/* Transformation Image Display */}
+        <div className="max-w-2xl mx-auto">
           <div className="relative rounded-2xl overflow-hidden border border-[#c9a84c]/30">
+            <img
+              src={transformations[active].image}
+              alt={transformations[active].style}
+              className="w-full h-auto object-cover"
+            />
             <div
-              className={`w-full h-72 bg-gradient-to-br ${transformations[active].after.bg} flex items-center justify-center`}
-            >
-              <div className="text-center">
-                <div className="text-6xl mb-3">✂️</div>
-                <div className="text-[#c9a84c] font-semibold text-sm px-6 text-center">
-                  {transformations[active].after.description}
-                </div>
-              </div>
-            </div>
-            <div
-              className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold text-black"
+              className="absolute top-4 left-4 px-4 py-2 rounded-full text-sm font-bold text-black backdrop-blur-sm"
               style={{ background: "linear-gradient(135deg, #c9a84c, #e8c97a)" }}
             >
-              DEPOIS
+              {transformations[active].style}
             </div>
           </div>
         </div>
 
-        {/* Note about real photos */}
-        <p className="text-center text-gray-600 text-xs mt-6">
-          * Fotos reais disponíveis no Instagram{" "}
+        {/* Note about Instagram */}
+        <p className="text-center text-gray-500 text-sm mt-8">
+          📸 Veja mais transformações no nosso{" "}
           <a
             href="https://instagram.com/barbearia.sw"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#c9a84c] hover:underline"
+            className="text-[#c9a84c] hover:underline font-semibold"
           >
-            @barbearia.sw
+            Instagram @barbearia.sw
           </a>
         </p>
 
