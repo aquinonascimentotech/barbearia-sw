@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Barbearia SW — Landing Page
 
-## Getting Started
+Landing page de alta conversão desenvolvida para a **Barbearia SW**, negócio local de São Paulo. O projeto foi construído com foco em captar agendamentos via WhatsApp e formulário, com design premium e performance otimizada.
 
-First, run the development server:
+---
+
+## Seções da página
+
+- **Hero** — CTA principal com estatísticas e link direto para WhatsApp
+- **Serviços** — Cards com preços, duração e botão de agendamento
+- **Transformações** — Antes e depois interativo por estilo de corte
+- **Depoimentos** — Avaliações reais com nota 4.9 no Google
+- **Agendamento** — Formulário que abre o WhatsApp com os dados preenchidos
+- **Localização** — Endereço, horários e mapa
+- **FAQ** — Dúvidas frequentes em accordion
+- **CTA Final** — Seção de fechamento com urgência e duplo CTA
+
+---
+
+## Stack
+
+- [Next.js 15](https://nextjs.org/) — App Router, Server Components
+- [React 19](https://react.dev/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- Deploy na [Vercel](https://vercel.com/)
+
+---
+
+## Rodando localmente
+
+> **Requisito:** Node.js 20 ou superior
 
 ```bash
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
 
-## Learn More
+O projeto está configurado para deploy automático na Vercel. Qualquer push na branch principal dispara um novo deploy.
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Deploy de produção via CLI
+npx vercel --prod
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Personalização
 
-## Deploy on Vercel
+Os dados da barbearia (telefone, endereço, serviços, preços) estão centralizados nos próprios componentes dentro de `components/`. Basta editar os arrays e objetos no topo de cada arquivo.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Arquivo | O que customizar |
+|---|---|
+| `components/Hero.tsx` | Estatísticas, CTAs, número do WhatsApp |
+| `components/Services.tsx` | Lista de serviços e preços |
+| `components/BookingForm.tsx` | Horários disponíveis, número do WhatsApp |
+| `components/Location.tsx` | Endereço, horários, embed do Maps |
+| `components/FAQ.tsx` | Perguntas e respostas |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Estrutura do projeto
+
+```
+barbearia-sw/
+├── app/
+│   ├── layout.tsx       # Metadados SEO, fonte, globals
+│   ├── page.tsx         # Composição das seções
+│   └── globals.css      # Tokens de design (cores, animações)
+├── components/
+│   ├── Header.tsx
+│   ├── Hero.tsx
+│   ├── Services.tsx
+│   ├── BeforeAfter.tsx
+│   ├── Testimonials.tsx
+│   ├── BookingForm.tsx
+│   ├── Location.tsx
+│   ├── FAQ.tsx
+│   ├── FinalCTA.tsx
+│   ├── Footer.tsx
+│   ├── WhatsAppButton.tsx
+│   └── Reveal.tsx       # Animações de scroll (IntersectionObserver)
+└── public/
+```
+
+---
+
+Desenvolvido por [Felipe Nascimento](https://github.com/felipeaquinonascimento)
