@@ -198,26 +198,33 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Floating badges with glassmorphism */}
+              {/* Floating badges with enhanced animations */}
               <div
                 className="absolute -top-3 -right-3 rounded-2xl px-4 py-2 text-xs font-bold text-black backdrop-blur-md"
                 style={{
                   background: "linear-gradient(135deg, #c9a84c, #e8c97a)",
-                  boxShadow: "0 4px 16px rgba(201, 168, 76, 0.4)",
-                  animation: "bounce 2s ease-in-out infinite",
+                  boxShadow: "0 4px 16px rgba(201, 168, 76, 0.5)",
+                  animation: "floatBadge 3s ease-in-out infinite",
                 }}
               >
                 ⭐ 4.9/5
               </div>
               <div
-                className="absolute -bottom-3 -left-3 rounded-2xl px-4 py-2 text-xs font-bold text-white backdrop-blur-md"
+                className="absolute -bottom-3 -left-3 rounded-2xl px-4 py-2 text-xs font-bold text-white backdrop-blur-md flex items-center gap-1.5"
                 style={{
                   background: "linear-gradient(135deg, #25d366, #128c7e)",
-                  boxShadow: "0 4px 16px rgba(37, 211, 102, 0.4)",
-                  animation: "bounce 2s ease-in-out infinite 1s",
+                  boxShadow: "0 4px 16px rgba(37, 211, 102, 0.5)",
+                  animation: "floatBadge 3s ease-in-out infinite 0.5s",
                 }}
               >
-                💬 Online
+                <span
+                  className="w-2 h-2 rounded-full bg-white"
+                  style={{
+                    animation: "pulseGreen 2s ease-in-out infinite",
+                    boxShadow: "0 0 8px rgba(255, 255, 255, 0.8)",
+                  }}
+                />
+                Online
               </div>
             </div>
           </div>
@@ -265,12 +272,23 @@ export default function Hero() {
           }
         }
 
-        @keyframes bounce {
+        @keyframes floatBadge {
           0%, 100% {
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
           }
           50% {
-            transform: translateY(-5px);
+            transform: translateY(-8px) scale(1.02);
+          }
+        }
+
+        @keyframes pulseGreen {
+          0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.5;
+            transform: scale(0.8);
           }
         }
       `}</style>
