@@ -198,30 +198,29 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Floating badges with enhanced animations */}
+              {/* Badges sempre visíveis e destacados */}
               <div
-                className="absolute -top-3 -right-3 rounded-2xl px-4 py-2 text-xs font-bold text-black backdrop-blur-md"
+                className="absolute top-4 right-4 rounded-xl px-4 py-2.5 text-sm font-bold text-black backdrop-blur-md"
                 style={{
                   background: "linear-gradient(135deg, #c9a84c, #e8c97a)",
-                  boxShadow: "0 4px 16px rgba(201, 168, 76, 0.5)",
-                  animation: "floatBadge 3s ease-in-out infinite",
+                  boxShadow: "0 6px 20px rgba(201, 168, 76, 0.6)",
+                  animation: "subtleGlow 2s ease-in-out infinite",
                 }}
               >
                 ⭐ 4.9/5
               </div>
               <div
-                className="absolute -bottom-3 -left-3 rounded-2xl px-4 py-2 text-xs font-bold text-white backdrop-blur-md flex items-center gap-1.5"
+                className="absolute bottom-4 left-4 rounded-xl px-4 py-2.5 text-sm font-bold text-white backdrop-blur-md flex items-center gap-2"
                 style={{
                   background: "linear-gradient(135deg, #25d366, #128c7e)",
-                  boxShadow: "0 4px 16px rgba(37, 211, 102, 0.5)",
-                  animation: "floatBadge 3s ease-in-out infinite 0.5s",
+                  boxShadow: "0 6px 20px rgba(37, 211, 102, 0.6)",
                 }}
               >
                 <span
-                  className="w-2 h-2 rounded-full bg-white"
+                  className="w-2.5 h-2.5 rounded-full bg-white"
                   style={{
                     animation: "pulseGreen 2s ease-in-out infinite",
-                    boxShadow: "0 0 8px rgba(255, 255, 255, 0.8)",
+                    boxShadow: "0 0 10px rgba(255, 255, 255, 0.9)",
                   }}
                 />
                 Online
@@ -272,12 +271,12 @@ export default function Hero() {
           }
         }
 
-        @keyframes floatBadge {
+        @keyframes subtleGlow {
           0%, 100% {
-            transform: translateY(0) scale(1);
+            box-shadow: 0 6px 20px rgba(201, 168, 76, 0.6);
           }
           50% {
-            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(201, 168, 76, 0.8);
           }
         }
 
@@ -287,8 +286,8 @@ export default function Hero() {
             transform: scale(1);
           }
           50% {
-            opacity: 0.5;
-            transform: scale(0.8);
+            opacity: 0.6;
+            transform: scale(0.85);
           }
         }
       `}</style>
