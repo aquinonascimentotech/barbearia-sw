@@ -175,13 +175,17 @@ export default function Hero() {
               
               <div className="text-center relative z-10">
                 <div
-                  className="text-7xl mb-4"
+                  className="mb-4"
                   style={{
                     filter: "drop-shadow(0 4px 12px rgba(201, 168, 76, 0.5))",
                     animation: "float 3s ease-in-out infinite",
                   }}
                 >
-                  ✂️
+                  <img
+                    src="/images/logo.png"
+                    alt="Barbearia SW"
+                    className="w-20 h-20 mx-auto object-contain"
+                  />
                 </div>
                 <div className="gold-gradient-text font-black text-2xl tracking-wider">BARBEARIA SW</div>
                 <div className="text-gray-400 text-sm mt-2 font-medium">Premium Barbershop</div>

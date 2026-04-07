@@ -42,14 +42,18 @@ export default function PageLoader() {
       {/* Logo/Icon Animated */}
       <div className="relative mb-12">
         <div
-          className="w-24 h-24 rounded-full flex items-center justify-center text-5xl relative"
+          className="w-32 h-32 rounded-full flex items-center justify-center p-6 relative"
           style={{
             background: "linear-gradient(135deg, #c9a84c, #e8c97a)",
             boxShadow: "0 20px 60px rgba(201,168,76,0.4)",
             animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
           }}
         >
-          ✂️
+          <img
+            src="/images/logo.png"
+            alt="Barbearia SW"
+            className="w-full h-full object-contain"
+          />
           {/* Rotating border */}
           <div
             className="absolute inset-0 rounded-full"

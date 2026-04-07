@@ -30,12 +30,11 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div
-            className="w-10 h-10 rounded-full flex items-center justify-center font-black text-sm text-black"
-            style={{ background: "linear-gradient(135deg, #c9a84c, #e8c97a)" }}
-          >
-            SW
-          </div>
+          <img
+            src="/images/logo.png"
+            alt="Barbearia SW Logo"
+            className="w-10 h-10 object-contain"
+          />
           <span className="font-bold text-lg tracking-wide text-white">
             Barbearia <span className="gold-gradient-text">SW</span>
           </span>

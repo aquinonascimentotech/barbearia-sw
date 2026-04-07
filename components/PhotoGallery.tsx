@@ -3,53 +3,47 @@
 import { useState } from "react";
 import Reveal from "./Reveal";
 
-// Placeholder images - substituir por imagens reais do Instagram/Google
+// Imagens reais do site Barbearia SW
 const galleryImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80",
-    alt: "Ambiente Barbearia SW",
+    src: "/images/frente-loja.jpg",
+    alt: "Fachada da Barbearia SW",
     category: "ambiente",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80",
-    alt: "Corte de cabelo masculino",
-    category: "trabalho",
+    src: "/images/pic-1.jpg",
+    alt: "Interior da Barbearia SW",
+    category: "ambiente",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80",
-    alt: "Barba modelada",
-    category: "trabalho",
+    src: "/images/pic-2.jpg",
+    alt: "Ambiente interno",
+    category: "ambiente",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80",
-    alt: "Interior da barbearia",
+    src: "/images/pic-3.jpg",
+    alt: "Estação de trabalho",
     category: "ambiente",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80",
-    alt: "Produtos premium",
-    category: "produtos",
+    src: "/images/pic-4.jpg",
+    alt: "Espaço premium",
+    category: "ambiente",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1620331311520-246422fd82f9?w=800&q=80",
-    alt: "Atendimento personalizado",
+    src: "/images/work-1.jpg",
+    alt: "Trabalho profissional",
     category: "trabalho",
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&q=80",
-    alt: "Equipamentos modernos",
-    category: "ambiente",
-  },
-  {
-    id: 8,
-    src: "https://images.unsplash.com/photo-1493256338651-d82f7acb2b84?w=800&q=80",
+    src: "/images/work-2.jpg",
     alt: "Resultado impecável",
     category: "trabalho",
   },
@@ -59,7 +53,6 @@ const categories = [
   { id: "todos", label: "Todos" },
   { id: "trabalho", label: "Nosso Trabalho" },
   { id: "ambiente", label: "Nosso Espaço" },
-  { id: "produtos", label: "Produtos" },
 ];
 
 export default function PhotoGallery() {
