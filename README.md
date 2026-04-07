@@ -1,6 +1,8 @@
 # Barbearia SW — Landing Page
 
-Landing page de alta conversão desenvolvida para a **Barbearia SW**, negócio local de São Paulo. O projeto foi construído com foco em captar agendamentos via WhatsApp e formulário, com design premium e performance otimizada.
+**🔗 [Ver site em produção →](https://barbearia-sw.vercel.app/)**
+
+Landing page de alta conversão desenvolvida para a **Barbearia SW**, negócio local em Uberlândia/MG. O projeto foi construído com foco em captar agendamentos via WhatsApp e formulário, com design premium e performance otimizada.
 
 ---
 
