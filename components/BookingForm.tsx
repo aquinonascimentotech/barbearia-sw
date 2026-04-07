@@ -65,7 +65,7 @@ export default function BookingForm() {
     );
 
     setStatus("success");
-    window.open(`https://wa.me/5511999999999?text=${msg}`, "_blank");
+    window.open(`https://wa.me/553432122031?text=${msg}`, "_blank");
   };
 
   const isValid =
@@ -111,17 +111,17 @@ export default function BookingForm() {
                 {
                   icon: "📍",
                   title: "Endereço",
-                  text: "Rua Exemplo, 123 — São Paulo, SP",
+                  text: "Av. Floriano Peixoto, 2593 — Uberlândia/MG",
                 },
                 {
                   icon: "🕐",
                   title: "Horários",
-                  text: "Seg–Sex: 09h–20h | Sáb: 09h–18h",
+                  text: "Seg–Sex: 8h30–19h | Sáb: 9h–16h30",
                 },
                 {
                   icon: "📱",
                   title: "WhatsApp",
-                  text: "(11) 99999-9999",
+                  text: "(34) 3212-2031",
                 },
                 {
                   icon: "📸",

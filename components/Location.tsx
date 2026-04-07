@@ -71,21 +71,21 @@ export default function Location() {
                 {
                   icon: "📍",
                   title: "Endereço",
-                  lines: ["Rua Exemplo, 123", "Bairro Centro — São Paulo, SP", "CEP 01310-000"],
+                  lines: ["Av. Floriano Peixoto, 2593", "Nossa Senhora Aparecida — Uberlândia/MG", "CEP 38400-702"],
                 },
                 {
                   icon: "🕐",
                   title: "Horários de Funcionamento",
                   lines: [
-                    "Segunda a Sexta: 09h às 20h",
-                    "Sábado: 09h às 18h",
+                    "Segunda a Sexta: 08:30 às 19:00",
+                    "Sábado: 09:00 às 16:30",
                     "Domingo: Fechado",
                   ],
                 },
                 {
                   icon: "📞",
                   title: "Contato",
-                  lines: ["(11) 99999-9999 (WhatsApp)", "contato@barbeariasw.com.br"],
+                  lines: ["(34) 3212-2031 (WhatsApp)", "@barbearia.sw"],
                 },
               ].map((block) => (
                 <div

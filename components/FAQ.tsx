@@ -115,7 +115,7 @@ export default function FAQ() {
             Ainda tem dúvidas? Fale direto com a gente.
           </p>
           <a
-            href="https://wa.me/5511999999999?text=Olá!%20Tenho%20uma%20dúvida%20sobre%20os%20serviços."
+            href="https://wa.me/553432122031?text=Olá!%20Tenho%20uma%20dúvida%20sobre%20os%20serviços."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-bold border border-[#25d366] text-[#25d366] hover:bg-[#25d366]/10 transition-all"

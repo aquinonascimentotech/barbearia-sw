@@ -43,21 +43,21 @@ export default function Hero() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 tracking-tight">
-            Sua aparência,{" "}
-            <span className="gold-gradient-text block">nossa obsessão.</span>
+            A sua aparência{" "}
+            <span className="gold-gradient-text block">vende.</span>
           </h1>
 
           <p className="text-lg text-gray-400 leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
-            Cortes modernos, barba impecável e ambiente premium. A Barbearia SW
-            cuida da sua imagem com excelência e atenção aos detalhes que fazem
-            a diferença.
+            Nós cuidamos da sua imagem para que ela fale por você. Cortes
+            modernos, barba impecável e atendimento personalizado em
+            Uberlândia/MG.
           </p>
 
           {/* Stats */}
           <div className="flex justify-center lg:justify-start gap-8 mb-10">
             {[
-              { value: "5.000+", label: "Clientes Satisfeitos" },
-              { value: "8 anos", label: "de Experiência" },
+              { value: "3+", label: "Anos de Dedicação" },
+              { value: "8 serv.", label: "Especialidades" },
               { value: "4.9★", label: "Avaliação Google" },
             ].map((stat) => (
               <div key={stat.label} className="text-center lg:text-left">
@@ -76,7 +76,7 @@ export default function Hero() {
               📅 Agendar Meu Horário
             </a>
             <a
-              href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20um%20horário."
+              href="https://wa.me/553432122031?text=Olá!%20Quero%20agendar%20um%20horário."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-bold border border-[#25d366] text-[#25d366] hover:bg-[#25d366]/10 transition-all"

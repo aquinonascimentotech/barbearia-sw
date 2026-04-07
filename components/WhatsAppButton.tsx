@@ -7,7 +7,7 @@ export default function WhatsAppButton() {
 
   return (
     <a
-      href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20um%20horário%20na%20Barbearia%20SW."
+      href="https://wa.me/553432122031?text=Olá!%20Quero%20agendar%20um%20horário%20na%20Barbearia%20SW."
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full shadow-2xl transition-all duration-300"

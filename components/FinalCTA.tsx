@@ -56,7 +56,7 @@ export default function FinalCTA() {
             📅 Agendar Meu Horário
           </a>
           <a
-            href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20um%20horário%20na%20Barbearia%20SW."
+            href="https://wa.me/553432122031?text=Olá!%20Quero%20agendar%20um%20horário%20na%20Barbearia%20SW."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-full px-10 py-4 text-base font-bold border border-[#25d366] text-[#25d366] hover:bg-[#25d366]/10 transition-all"

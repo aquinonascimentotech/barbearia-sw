@@ -42,7 +42,7 @@ export default function Footer() {
                 📸
               </a>
               <a
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/553432122031"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full flex items-center justify-center text-sm transition-all hover:scale-110"
@@ -86,19 +86,19 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-500">
               <li className="flex gap-2">
                 <span>📍</span>
-                <span>Rua Exemplo, 123 — SP</span>
+                <span>Av. Floriano Peixoto, 2593 — Uberlândia/MG</span>
               </li>
               <li className="flex gap-2">
                 <span>📱</span>
-                <span>(11) 99999-9999</span>
+                <span>(34) 3212-2031</span>
               </li>
               <li className="flex gap-2">
                 <span>🕐</span>
-                <span>Seg–Sex: 9h–20h</span>
+                <span>Seg–Sex: 8h30–19h</span>
               </li>
               <li className="flex gap-2">
                 <span>🕐</span>
-                <span>Sáb: 9h–18h</span>
+                <span>Sáb: 9h–16h30</span>
               </li>
             </ul>
           </div>

@@ -5,6 +5,7 @@ import BeforeAfter from "@/components/BeforeAfter";
 import Testimonials from "@/components/Testimonials";
 import BookingForm from "@/components/BookingForm";
 import Location from "@/components/Location";
+import Team from "@/components/Team";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -19,6 +20,7 @@ export default function Home() {
         <Services />
         <BeforeAfter />
         <Testimonials />
+        <Team />
         <BookingForm />
         <Location />
         <FAQ />

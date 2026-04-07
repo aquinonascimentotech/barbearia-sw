@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Barbearia SW | Cortes de Excelência em São Paulo",
+  title: "Barbearia SW | Uberlândia/MG — A sua aparência vende",
   description:
-    "A barbearia premium de São Paulo. Cortes modernos, barba perfeita e atendimento VIP. Agende seu horário agora e transforme seu visual.",
-  keywords: "barbearia, corte de cabelo, barba, São Paulo, barbearia premium",
+    "Barbearia premium em Uberlândia/MG. Cortes modernos, barba impecável e atendimento personalizado. Seg–Sex 8h30–19h | Sáb 9h–16h30. Agende agora!",
+  keywords: "barbearia, corte de cabelo, barba, Uberlândia, MG, barbearia SW, barbearia Uberlândia",
   openGraph: {
-    title: "Barbearia SW | Cortes de Excelência",
-    description: "Transforme seu visual com os melhores barbeiros de SP. Agende agora!",
+    title: "Barbearia SW | Uberlândia/MG",
+    description: "A sua aparência vende. Nós cuidamos da sua imagem para que ela fale por você. Agende agora!",
     type: "website",
   },
 };
