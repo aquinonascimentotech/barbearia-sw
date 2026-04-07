@@ -1,4 +1,32 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function Hero() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({
+        x: (e.clientX / window.innerWidth - 0.5) * 20,
+        y: (e.clientY / window.innerHeight - 0.5) * 20,
+      });
+    };
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
@@ -7,24 +35,43 @@ export default function Hero() {
           "radial-gradient(ellipse at 70% 40%, rgba(201,168,76,0.12) 0%, transparent 60%), #0a0a0a",
       }}
     >
-      {/* Background pattern */}
+      {/* Background pattern with parallax */}
       <div
         className="absolute inset-0 opacity-5"
         style={{
           backgroundImage:
             "repeating-linear-gradient(45deg, #c9a84c 0, #c9a84c 1px, transparent 0, transparent 50%)",
           backgroundSize: "20px 20px",
+          transform: `translateY(${scrollY * 0.3}px)`,
         }}
       />
 
-      {/* Floating decorative circles */}
+      {/* Floating decorative circles with parallax */}
       <div
         className="absolute top-20 right-10 w-64 h-64 rounded-full opacity-10 blur-3xl"
-        style={{ background: "radial-gradient(circle, #c9a84c, transparent)" }}
+        style={{
+          background: "radial-gradient(circle, #c9a84c, transparent)",
+          transform: `translate(${mousePosition.x}px, ${mousePosition.y - scrollY * 0.5}px)`,
+          transition: "transform 0.3s ease-out",
+        }}
       />
       <div
         className="absolute bottom-20 left-10 w-48 h-48 rounded-full opacity-8 blur-2xl"
-        style={{ background: "radial-gradient(circle, #c9a84c, transparent)" }}
+        style={{
+          background: "radial-gradient(circle, #c9a84c, transparent)",
+          transform: `translate(${-mousePosition.x * 0.5}px, ${-mousePosition.y * 0.5 - scrollY * 0.3}px)`,
+          transition: "transform 0.3s ease-out",
+        }}
+      />
+      
+      {/* Additional floating orbs */}
+      <div
+        className="absolute top-1/2 left-1/4 w-32 h-32 rounded-full opacity-5 blur-2xl"
+        style={{
+          background: "radial-gradient(circle, #e8c97a, transparent)",
+          transform: `translate(${mousePosition.x * 1.5}px, ${mousePosition.y * 1.5 - scrollY * 0.4}px)`,
+          transition: "transform 0.25s ease-out",
+        }}
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-32 grid lg:grid-cols-2 gap-12 items-center">
@@ -90,41 +137,83 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Hero Visual */}
+        {/* Hero Visual with Glassmorphism */}
         <div className="hidden lg:flex justify-center items-center">
           <div className="relative">
-            {/* Main card */}
+            {/* Glassmorphism card */}
             <div
-              className="w-80 h-80 rounded-3xl flex items-center justify-center relative overflow-hidden border border-[#1e1e1e]"
+              className="w-80 h-80 rounded-3xl flex items-center justify-center relative overflow-hidden"
               style={{
-                background: "linear-gradient(135deg, #111 0%, #1a1a1a 100%)",
+                background: "rgba(17, 17, 17, 0.4)",
+                backdropFilter: "blur(20px) saturate(180%)",
+                WebkitBackdropFilter: "blur(20px) saturate(180%)",
+                border: "1px solid rgba(201, 168, 76, 0.2)",
+                boxShadow: "0 8px 32px rgba(201, 168, 76, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.05)",
+                transform: `perspective(1000px) rotateY(${mousePosition.x * 0.5}deg) rotateX(${-mousePosition.y * 0.5}deg)`,
+                transition: "transform 0.15s ease-out",
               }}
             >
+              {/* Animated gradient overlay */}
               <div
-                className="absolute inset-0 opacity-20"
+                className="absolute inset-0 opacity-30"
                 style={{
                   background:
                     "radial-gradient(circle at 30% 30%, #c9a84c, transparent 60%)",
+                  animation: "pulse 4s ease-in-out infinite",
                 }}
               />
+              
+              {/* Shine effect */}
+              <div
+                className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-700"
+                style={{
+                  background: "linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%)",
+                  backgroundSize: "200% 200%",
+                  animation: "shine 3s infinite",
+                }}
+              />
+              
               <div className="text-center relative z-10">
-                <div className="text-7xl mb-4">✂️</div>
-                <div className="gold-gradient-text font-black text-2xl">BARBEARIA SW</div>
-                <div className="text-gray-400 text-sm mt-2">Premium Barbershop</div>
+                <div
+                  className="text-7xl mb-4"
+                  style={{
+                    filter: "drop-shadow(0 4px 12px rgba(201, 168, 76, 0.5))",
+                    animation: "float 3s ease-in-out infinite",
+                  }}
+                >
+                  ✂️
+                </div>
+                <div className="gold-gradient-text font-black text-2xl tracking-wider">BARBEARIA SW</div>
+                <div className="text-gray-400 text-sm mt-2 font-medium">Premium Barbershop</div>
+                
+                {/* Decorative line */}
+                <div className="flex items-center gap-2 justify-center mt-4">
+                  <div className="w-8 h-px bg-gradient-to-r from-transparent via-[#c9a84c] to-transparent"></div>
+                  <div className="text-[#c9a84c] text-xs">★</div>
+                  <div className="w-8 h-px bg-gradient-to-r from-transparent via-[#c9a84c] to-transparent"></div>
+                </div>
               </div>
 
-              {/* Floating badges */}
+              {/* Floating badges with glassmorphism */}
               <div
-                className="absolute -top-3 -right-3 rounded-2xl px-3 py-2 text-xs font-bold text-black"
-                style={{ background: "linear-gradient(135deg, #c9a84c, #e8c97a)" }}
+                className="absolute -top-3 -right-3 rounded-2xl px-4 py-2 text-xs font-bold text-black backdrop-blur-md"
+                style={{
+                  background: "linear-gradient(135deg, #c9a84c, #e8c97a)",
+                  boxShadow: "0 4px 16px rgba(201, 168, 76, 0.4)",
+                  animation: "bounce 2s ease-in-out infinite",
+                }}
               >
                 ⭐ 4.9/5
               </div>
               <div
-                className="absolute -bottom-3 -left-3 rounded-2xl px-3 py-2 text-xs font-bold text-black"
-                style={{ background: "linear-gradient(135deg, #25d366, #128c7e)" }}
+                className="absolute -bottom-3 -left-3 rounded-2xl px-4 py-2 text-xs font-bold text-white backdrop-blur-md"
+                style={{
+                  background: "linear-gradient(135deg, #25d366, #128c7e)",
+                  boxShadow: "0 4px 16px rgba(37, 211, 102, 0.4)",
+                  animation: "bounce 2s ease-in-out infinite 1s",
+                }}
               >
-                💬 Resposta rápida
+                💬 Online
               </div>
             </div>
           </div>
@@ -137,10 +226,50 @@ export default function Hero() {
         <div className="w-5 h-8 rounded-full border border-gray-600 flex justify-center pt-1.5">
           <div
             className="w-1 h-1.5 rounded-full bg-gray-400"
-            style={{ animation: "fadeInUp 1.5s ease infinite" }}
+            style={{ animation: "scrollBounce 1.5s ease infinite" }}
           />
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scrollBounce {
+          0%, 100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          50% {
+            transform: translateY(8px);
+            opacity: 0.3;
+          }
+        }
+
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+
+        @keyframes shine {
+          0% {
+            background-position: 200% 0;
+          }
+          100% {
+            background-position: -200% 0;
+          }
+        }
+
+        @keyframes bounce {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-5px);
+          }
+        }
+      `}</style>
     </section>
   );
 }
