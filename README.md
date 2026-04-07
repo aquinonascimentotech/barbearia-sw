@@ -96,4 +96,4 @@ barbearia-sw/
 
 ---
 
-Desenvolvido por [Felipe Nascimento](https://github.com/felipeaquinonascimento)
+Desenvolvido por [Aquino Nascimento Tech](https://github.com/felipeaquinonascimento)
