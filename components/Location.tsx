@@ -30,37 +30,22 @@ export default function Location() {
         <hr className="section-gold-line mb-16" />
 
         <div className="grid lg:grid-cols-2 gap-10 items-center">
-          {/* Map embed placeholder */}
+          {/* Google Maps Embed */}
           <Reveal direction="left">
             <div
               className="rounded-3xl overflow-hidden border border-[#1e1e1e] relative"
               style={{ height: "380px" }}
             >
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#111]">
-                <div className="text-5xl mb-4">📍</div>
-                <p className="text-gray-400 text-sm mb-4 text-center px-8">
-                  Substitua pelo embed do Google Maps real
-                </p>
-                <a
-                  href="https://maps.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-gold rounded-full px-6 py-2.5 text-sm"
-                >
-                  Abrir no Google Maps
-                </a>
-              </div>
-              {/* Uncomment below and set real coords for real map:
               <iframe
-                src="https://www.google.com/maps/embed?pb=..."
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.4676598447634!2d-48.28196492396896!3d-18.943333982237687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a445d02d3b3f2f%3A0x5f4b3f3e3e3e3e3e!2sAv.%20Floriano%20Peixoto%2C%202593%20-%20Nossa%20Sra.%20Aparecida%2C%20Uberl%C3%A2ndia%20-%20MG%2C%2038400-702!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                title="Localização Barbearia SW"
               />
-              */}
             </div>
           </Reveal>
 
@@ -117,6 +102,15 @@ export default function Location() {
                 className="btn-gold flex items-center justify-center gap-2 rounded-2xl px-8 py-4 text-base w-full"
               >
                 📅 Agendar meu horário agora
+              </a>
+
+              <a
+                href="https://maps.app.goo.gl/YZLhYCFh6ZWAN1dGA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-2xl px-8 py-4 text-base w-full font-bold border border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c]/10 transition-all"
+              >
+                🗺️ Ver rotas no Google Maps
               </a>
             </div>
           </Reveal>
